@@ -21,5 +21,7 @@ void times_table(void)
 			printf("%2d", number * multiplier);
 		}
 		printf("\n");
+
 	}
+
 }
