@@ -7,6 +7,7 @@
 int main(void)
 {
 	long int i, j, k, next;
+
 	j = 1;
 	k = 2;
 
@@ -20,6 +21,7 @@ int main(void)
 		{
 			printf("%ld\n", j);
 		}
+		
 		next = j + k;
 		j = k;
 		k = next;
