@@ -7,21 +7,32 @@
  */
 void times_table(void)
 {
-	int number = 0;
-	int multiplier = 0;
+	int i, j, k;
 
-	for (multiplier = 0; multiplier < 10; multiplier++)
+	for (i = 0; i <= 9; i++)
 	{
-		for (number = 0; number < 10; number++)
+		for (j = 0; j <= 9; j++)
 		{
-			if (number > 0)
+			k = i * j;
+			if (j == 0)
 			{
-				printf(", ");
+				_putchar(k + '0');
 			}
-			printf("%2d", number * multiplier);
+			else if (k <= 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k + '0');
+			}
+			else if (k >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(k / 10 + '0');
+				_putchar(k % 10 + '0');
+			}
 		}
-		printf("\n");
-
+		_putchar('\n');
 	}
-
 }
