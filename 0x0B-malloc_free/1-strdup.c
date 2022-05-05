@@ -2,43 +2,43 @@
 #include <stdlib.h>
 /**
  *  _strdup - returns a pointer to a newly alloctaed
- *   space in memory which contains a copy of the string
- *    passed.
- *     @str: pointer to string being duplicated.
- *      
- *       Return: NULL if str is NULL.
- *        pointer to duplicated string on success.
- *         NULL if memory was insufficient.
- *          /
- *          char *_strdup(char *str)
- *          {
- *          char *nstr;
- *          unsigned int len, i;
- *
- */* check is str is null */
-if (str == NULL)
+ *  space in memory which contains a copy of the string
+ *  passed.
+ *  @str: pointer to string being duplicated.
+ *   
+ *   Return: NULL if str is NULL.
+ *   pointer to duplicated string on success.
+ *   NULL if memory was insufficient.
+ */
+char *_strdup(char *str)
 {
-	return (NULL);
-}
+	char *nstr;
+	unsigned int len, i;
 
-len = 0;
-while (str[len] != '\0')
-{
-	len++;
-}
+	/* check is str is null */
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 
-nstr = malloc(sizeof(char) * (len + 1));
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
 
-/*check if malloc was successful*/
-if (nstr == NULL)
-{
-	return (NULL);
-}
+	nstr = malloc(sizeof(char) * (len + 1));
 
-for (i = 0; i < len; i++)
-{
-	nstr[i] = str[i];
-}
-nstr[len] = '\0';
-return (nstr);
+	/*check if malloc was successful*/
+	if (nstr == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < len; i++)
+	{
+		nstr[i] = str[i];
+	}
+	nstr[len] = '\0';
+	return (nstr);
 }
