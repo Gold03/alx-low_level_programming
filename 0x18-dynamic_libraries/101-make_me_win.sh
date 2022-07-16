@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -P .. https://github.com/sentayehut/alx-low_level_programming/tree/main/0x18-dynamic_libraries/libinjection.so
-export LD_PRELOAD="$PWD/../libinjection.so"
+wget -q -O /tmp/winwin.so https://github.com/ermiasbahru/alx-low_level_programming/raw/master/0x18-dynamic_libraries/winwin.so
+export LD_PRELOAD=/tmp/winwin.so
